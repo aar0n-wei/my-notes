@@ -8,10 +8,17 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
+      { text: '部署指南', link: '/deploy-guide' },
       { text: 'Examples', link: '/markdown-examples' }
     ],
 
     sidebar: [
+      {
+        text: '开发与运维',
+        items: [
+          { text: 'VitePress 部署实践指南', link: '/deploy-guide' }
+        ]
+      },
       {
         text: 'Examples',
         items: [
@@ -22,7 +29,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/aar0n-wei/my-notes' }
     ]
   }
 })
