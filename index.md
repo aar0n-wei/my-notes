@@ -6,12 +6,12 @@ hero:
   text: "技术知识库 & 运维排障速查"
   tagline: 记录日常开发、容器运维、系统环境及工具使用中的故障排查与实战经验
   actions:
-    - theme: brand
-      text: 容器与运维
-      link: /devops/docker/
-    - theme: alt
-      text: 系统与环境
-      link: /os/windows/
+    # - theme: brand
+    #   text: 容器与运维
+    #   link: /devops/docker/
+    # - theme: alt
+    #   text: 系统与环境
+    #   link: /os/windows/
 
 features:
   - icon: 🐳
