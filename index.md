@@ -1,25 +1,33 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
 hero:
   name: "Gwen Note"
-  text: "不积跬步无以至千里，不积小流无以成江海。"
-  tagline: 基于 VitePress + GitHub Pages 自动化构建的个人博客与技术知识库
+  text: "技术知识库 & 运维排障速查"
+  tagline: 记录日常开发、容器运维、系统环境及工具使用中的故障排查与实战经验
   actions:
     - theme: brand
-      text: 部署与配置指南
-      link: /deploy-guide
+      text: 容器与运维
+      link: /devops/docker/
     - theme: alt
-      text: Markdown 示例
-      link: /markdown-examples
+      text: 系统与环境
+      link: /os/windows/
 
 features:
-  - title: VitePress 驱动
-    details: 极速开发体验，依托 Vite 与 Vue 3，秒级热重载与轻量打包。
-  - title: 自动化 CI/CD
-    details: 代码提交至 main 分支即自动触发 GitHub Actions 构建并同步发布。
-  - title: 独立域名与 HTTPS
-    details: 接入自定义域名 blog.wgwen.top，全站强制 Let's Encrypt SSL/TLS 加密。
+  - icon: 🐳
+    title: 容器与运维
+    details: Docker 容器通信与资源限制、Linux 系统与存储瓶颈、MySQL 数据库死锁与连接排查。
+    link: /devops/docker/
+  - icon: 🪟
+    title: 操作系统与环境
+    details: Windows 端口占用强杀、WSL2 镜像网络模式、跨平台编码与代理环境适配。
+    link: /os/windows/
+  - icon: 🛠️
+    title: 常用工具与软件
+    details: Git 历史误提交清理与变基、Nginx 反代规则及日常软件脚本配置。
+    link: /tools/git/
+  - icon: 🚀
+    title: 站点部署与自动化
+    details: VitePress 静态博客架构、GitHub Actions CI/CD 自动流水线与自定义域名解析。
+    link: /deploy-guide
 ---
-

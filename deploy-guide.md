@@ -9,7 +9,7 @@
 - **静态站点框架**：[VitePress](https://vitepress.dev/)
 - **代码托管与 CI/CD**：GitHub + GitHub Actions
 - **静态网页托管**：GitHub Pages
-- **自定义域名解析**：DNSPod / 腾讯云解析（`blog.wgwen.top` -> `aar0n-wei.github.io`）
+- **自定义域名解析**：DNSPod / 腾讯云解析
 - **安全证书**：GitHub Pages 自动签发并续期的 Let's Encrypt SSL/TLS 证书
 
 ---
@@ -34,7 +34,7 @@ GitHub Pages 在使用自定义域名时依赖打包产物根目录下的 `CNAME
 > VitePress 在项目根目录运行时，静态资源目录默认优先读取根目录下的 **`public/`**。
 > 因此必须在根目录创建 `public/CNAME` 文件，内容填写自定义域名：
 > ```
-> blog.wgwen.top
+> blog.test.top
 > ```
 > VitePress 在每次运行 `npm run docs:build` 时，会自动将 `public/` 里的所有文件原封不动复制到 `.vitepress/dist/` 产物根目录。
 
@@ -113,10 +113,10 @@ jobs:
 
 | 记录类型 | 主机记录 | 记录值 | TTL | 作用说明 |
 | :--- | :--- | :--- | :--- | :--- |
-| **CNAME** | `blog` | `aar0n-wei.github.io` | 默认 (600) | 将 `blog.wgwen.top` 解析指向 GitHub Pages 服务节点 |
+| **CNAME** | `blog` | `test.github.io` | 默认 (600) | 将 `blog.test.top` 解析指向 GitHub Pages 服务节点 |
 
 > [!TIP]
-> 如果您使用的是主域名（如 `wgwen.top`），则无法使用 CNAME，需要添加 4 条 `A` 记录指向 GitHub 的 IP 地址：
+> 如果您使用的是主域名（如 `test.top`），则无法使用 CNAME，需要添加 4 条 `A` 记录指向 GitHub 的 IP 地址：
 > - `185.199.108.153`
 > - `185.199.109.153`
 > - `185.199.110.153`
@@ -132,7 +132,7 @@ jobs:
    - **必须**选择 **`GitHub Actions`**。
    - （切勿选择默认的 Deploy from a branch，否则 Actions 流水线无权调度 Pages 发布）。
 2. **自定义域名（Custom domain）**：
-   - 填入 `blog.wgwen.top` 并点击 **Save**。
+   - 填入 `blog.test.top` 并点击 **Save**。
    - GitHub 会自动触发 DNS 检查（DNS Check Successful）。
 3. **强制 HTTPS（Enforce HTTPS）**：
    - 域名绑定后，GitHub 会向 Let's Encrypt 申请 SSL/TLS 证书（通常耗时 1~3 分钟）。
